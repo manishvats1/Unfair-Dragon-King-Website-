@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>login/signup</title>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,300&display=swap" rel="stylesheet">
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"
+        ></script>
+        <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url(images/login\ bg1.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .box{                 
+        width: 320px;
+        height: 400px;
+        background-color: #000000b3;
+        color: #fff;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 50%;
+        padding: 70px 30px;
+        box-sizing: border-box;
+        border-radius: 10px;    }
+
+        .udk_CHARACTER{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: 35%;
+        }
+        
+        .box input{
+            border: none;
+            border-bottom: 1px solid#fff;
+            background-color: transparent;
+            outline: none;
+            height: 40px;
+            width: 250px;
+            color: #fff;
+            font-size: 16px;  
+        }
+
+        .box output{
+            border: none;
+            border-bottom: 1px solid#fff;
+            background-color: transparent;
+            outline: none;
+            height: 40px;
+            width: 250px;
+            color: #fff;
+            font-size: 16px;   
+        }
+
+        a{
+            color: yellow;
+        }
+
+        a:hover{
+            cursor: pointer;
+            background-color: #fb2525 ;
+            color: #000;
+        }
+
+        .button{
+            border: none;
+            outline: none;
+            height: 40px;
+            width: 125px;
+            background-color: #fb2525;
+            color: #fff;
+            transition: 0.4s ease;
+            font-size: 18px;
+            border-radius: 20px;  
+        }
+
+        .button:hover{
+            cursor: pointer;
+            background-color: #ffc107;
+            color: #000;
+        }
+        </style>
+    </head>
+    <div class="box">
+            <img src="images/udk_CHARACTER.png" class="udk_CHARACTER">
+                <center><h3>Login/SignUp Here</h3></center>
+            <form onsubmit="login()" id="loginForm" class="card-body px-5 py-4">
+                <center><small><span id="error" style="color: red"></span></small></center>
+                <center>
+                    <input id="email" type="text" class="input" placeholder="Email id" required /><br><br>
+                    <input id="password" type="password" class="output" placeholder="Password" required /><br><br><br>
+                <center>
+                <a href="#" onclick="forgotPass()">Forgot Password</a> </center><br>
+                <center><button type="submit" class="button">Login</button>
+                <button onclick="signUp()" class="button">Sign Up</button>
+                </center>
+            </form> 
+    </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-auth.js"></script>
+
+        <script src="firebase.js"></script>
+        <script src="login.js"></script>
+    </body>
+</html>
